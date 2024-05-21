@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col">
+        <p>Account Name: <%= current_user.first %> <%= current_user.last %> </p>
+        <p>Account Email: <%= current_user.email %> </p>
+        <% if current_user.private %>
+            <p>Privacy: Account is Private </p>
+        <% else %>
+            <p>Privacy: Account is Public </p>
+        <% end %>
+        <p> Account Created at: <%= current_user.created_at.to_formatted_s(:long_ordinal) %> </p>
+    </div>
+
+    <div class="col">
+        <div class="row">
+            <div class="col">
+                <%= link_to "Runs", runs_path, class: "nav-link" %>
+            </div>
+
+            <div class="col">
+                <%= link_to "Workouts", workouts_path, class: "nav-link" %>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row" >
+    
+</div>
+
+
+
+

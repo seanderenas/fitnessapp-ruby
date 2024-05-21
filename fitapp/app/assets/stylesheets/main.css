@@ -1,0 +1,47 @@
+body {
+    background-color: gray;
+}
+
+.imageContainer {
+  position: relative;
+  text-align: center;
+  
+}
+
+.imageTagContentTop {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+}
+.imageTagContentBottom {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  color: white;
+}
+
+#custButton:hover { /* used for divs or links acting as buttons */
+    background-color: rgba(0, 0, 0, 0.301);  
+    transition: .3s;;
+}
+#custButton:active { /* used for divs or links acting as buttons */
+    background-color: rgba(0, 0, 0, 0.74);  
+    color: white;
+    transition: .3s;;
+}
+#custButton {  
+    transition: .3s;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+#custNavLink:hover {
+    background-color: rgba(255, 255, 255, 0.315);
+}
+#custNavLink:active {
+    background-color: rgb(255, 51, 0);
+    
+    
+}

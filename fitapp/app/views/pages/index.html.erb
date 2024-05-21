@@ -1,0 +1,60 @@
+<div class="row " id="topPage">
+    
+    <div class="col imageContainer">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active bg-dark">
+                    <%= image_tag("/assets/motiv4-7f5f73d74502bd68e0da355a974b1f07975a6e666b72c829c468916a7c734d8f.png", class: "d-block w-100 mh-75 rounded")%> 
+                </div>
+                <div class="carousel-item bg-dark">
+                    <%= image_tag("/assets/motiv1-42a9431a670d8489322f053608fd516a05db4ff9564b1617fbaeec2e9bf8f5ee.png", class: "d-block w-100 mh-75 rounded")%> 
+                </div>
+                <div class="carousel-item bg-dark">
+                    <%= image_tag("/assets/motiv2-646cbae652fdf7934231bc766f8f72143564ef62a51b8fd1bd41932db46da94d.png", class: "d-block w-100a mh-75 rounded")%> 
+                </div>
+                <div class="carousel-item bg-dark">
+                    <%= image_tag("/assets/motiv3-29a0726e15574181bfc0462de2c855da07cafd5535c90fbf5d2af202e6f959d7.png", class: "d-block w-100 mh-75 rounded")%> 
+                </div>
+            </div>
+        </div>
+        
+        <% if user_signed_in? %>
+            <h1 class="imageTagContentTop"> Welcoom: <%= @userName%> </h1>
+        <% else %>
+            <h1 class="imageTagContentTop"> New to the app? Sign Up <%= link_to "Here", new_user_registration_path, class: "nav-link" %></h1>
+        <% end %>
+        <h1 class="imageTagContentBottom">Today is: <%= Date.current.to_formatted_s(:long_ordinal) %></h1>
+        
+    </div>
+
+</div>
+
+<div class="row mt-2" id="content">
+    <div class="col m-2 bg-dark rounded"> 
+        <div class="col m-2 text-center"> <h2 class="m-2 mt-4 pt-2 pb-2 text-light">Yesterdays Prgress: <%= Date.yesterday.to_formatted_s(:long_ordinal) %> </h2> </div>
+        <div class="col m-2 text-center"> <h2 class="m-2 mt-4 pt-2 pb-2 text-light">Todays goal is: User_daily_goal </h2> </div>
+    </div>
+    <div class="col m-2 border border-dark rounded bg-dark">
+    
+    <%= link_to runs_path, class: "text-decoration-none  m-2 button", :action => 'go' do %>
+        <div class="col text-center pt-2 pb-2" id="custButton">
+            <h2 class="text-light">Track Recent Run/Jog</h2>
+        </div>
+    <% end %>
+    
+    <%= link_to workouts_path, class: "text-decoration-none  m-2", :action => 'go' do %>
+        <div class="col text-center pt-2 pb-2" id="custButton">
+            <h2 class="text-light">Track Recent Workout</h2>
+        </div>
+    <% end %>
+
+    </div>
+</div>
+
+<div class="row mt-3">
+
+    
+
+</div>
+
+

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  hours: 9.99
+  dateWorked: 2023-06-01
+
+two:
+  name: MyString
+  hours: 9.99
+  dateWorked: 2023-06-01
